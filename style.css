@@ -30,7 +30,7 @@ main {
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px; /* расстояние между пунктами */
+  gap: 40px;
 }
 
 .nav-list {
@@ -144,13 +144,13 @@ main {
 }
 
 .about__content {
+  display: flex;
   flex-direction: column;
   gap: 24px;
   flex: 1;
 }
 
 .about__text {
-  display: flex;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -298,42 +298,19 @@ main {
   text-align: center;
 }
 
-.project {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 600px;
-}
-
 .project--marble {
   background-image: url("assets/images/stairs.jpg");
   justify-content: flex-end;
 }
 
-.project__info {
-  width: 300px;
-  margin-right: 60px;
-}
-
 .project__name {
-  font-family: Poppins sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #403E3B;
-}
-
-.project__description {
-  font-family: Poppins sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #645C55;
 }
 
 .clients {
@@ -375,7 +352,7 @@ max-width: 460px;
 }
 
 .clients__description {
-  font-family: Poppins sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -418,6 +395,64 @@ max-width: 460px;
   margin-bottom: 40px;
   max-width: 600px;
 }
+
+.featured_projects-item-with-info {
+  position: relative;
+}
+
+.featured_projects-item-with-info img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.featured_projects-item-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;     /* было: center → меняем на stretch */
+  padding: 18px 30px;       /* подгоняем под Figma: 18px сверху */
+  box-sizing: border-box;
+  gap: 280px;
+}
+
+.featured_projects-item-text {
+  text-align: left;         /* было: center → меняем на left */
+}
+
+.featured_projects-item-category {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #645C55;
+  margin: 0 0 8px 0;
+}
+
+.featured_projects-item-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  color: #403E3B;
+  margin: 0;
+}
+
+.featured_projects-item-link {
+  position: absolute;
+  top: 370px;
+  left: 110px;
+  transform: translateX(-50%);
+  background: #1B1A1A;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 16px;
+}
+
 .featured-projects__title {
   font-family: Poppins, sans-serif;
   font-weight: 400;
@@ -457,7 +492,7 @@ max-width: 460px;
   letter-spacing: 0.4px;
   text-align: center;
   color: #1B1A1A;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .our_team {
@@ -540,7 +575,7 @@ max-width: 460px;
   line-height: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #645C55
+  color: #645C55;
 }
 
 .get_in_touch__inner_left-description {
@@ -571,7 +606,7 @@ max-width: 460px;
   max-width: 1440px;
   padding: 60px 136px;
   margin: 0 auto;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .technologies__inner {
